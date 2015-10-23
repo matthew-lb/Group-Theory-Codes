@@ -1,7 +1,13 @@
 public class SymGroupElem {
 
-	private int len;
-	private int[] maps; //length of maps is len + 1
+	protected int len;
+	protected int[] maps; //length of maps is len + 1
+
+	public SymGroupElem() {
+		len = 1;
+		maps = new int[2];
+		maps[1] = 1;
+	}
 
 	public SymGroupElem(int n, int[] mps) {
 		len = n;
