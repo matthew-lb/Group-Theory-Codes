@@ -41,4 +41,29 @@ public class SymGroupElem {
 		}
 		return s;
 	}
+
+	public int[] maps() {
+		return maps;
+	}
+
+	public int len() {
+		return len;
+	}
+
+	public SymGroupElem mult(SymGroupElem other) {
+		int newLen = Math.max(len, other.len());
+		int[] newMap = new int[newLen + 1];
+		newMap[0] = 0;
+		for (int i = 1; i <= newLen; i++) {
+			newMap[i] = mapsTo(other.mapsTo(i));
+		}
+		return new SymGroupElem(newLen, newMap);
+	}
+
+	public int mapsTo(int i) {
+		if (i <= len) {
+			return maps[i];
+		}
+		return i;
+	}
 }
