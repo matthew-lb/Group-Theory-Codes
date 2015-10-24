@@ -34,7 +34,7 @@ public class SymGroupElem {
 		boolean[] used = new boolean[len + 1];
 		for (int i = 1; i <= len; i++) {
 			int t = i;
-			if (!used[i]) {
+			if (!used[i] && maps[i] != i) {
 				s += "(" + i;
 				while (maps[t] != i) {
 					s += maps[t];
