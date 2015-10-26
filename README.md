@@ -8,6 +8,7 @@ This is a repository containing codes (and possibly in the future articles) writ
 
 1. SymmetricGroup - Directory containing functions for working with the n-th symmetric group
 
+2. Polynomials - Directory containing functions for working with polynomials (currently in development)
 
 ## Future Plans?
 
